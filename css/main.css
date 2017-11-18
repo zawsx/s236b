@@ -1,0 +1,93 @@
+/*! HTML5 Boilerplate v6.0.1 | MIT License | https://html5boilerplate.com/ Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal, * Kroc Camen, and the H5BP dev community and team. */
+html {color: #222; background: #fff; font-size: 1em; line-height: 1.4;} /* Base styles: opinionated defaults */ 
+/* * Remove text-shadow in selection highlight: * https://twitter.com/miketaylr/status/12228805301 * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471 * * Customize the background color to match your design. */
+::-moz-selection {background: #b3d4fc;  text-shadow: none;} ::selection {background: #b3d4fc; text-shadow: none;}
+/* * A better looking default horizontal rule */hr {display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0;}
+/* Remove the gap between audio, canvas, iframes, images, videos and the bottom of their containers: https://github.com/h5bp/html5-boilerplate/issues/440 */
+audio,canvas,iframe,img,svg,video {vertical-align: middle;} /* * Remove default fieldset styles. */fieldset {border: 0; margin: 0; padding: 0;}
+/* Allow only vertical resizing of textareas. */textarea {resize: vertical;} /* Browser Upgrade Prompt */.browserupgrade {margin: 0.2em 0; background: #ccc; color: #000; padding: 0.2em 0;}
+/* custom styles *//* Color schemes 37dbff */:root {--sz-h;19;--sz-w:19}
+.szbtn2-1 {--color-text: #000; 	--color-bg: #f1f1f1; --color-link: #000; 	--color-link-hover: #0e54c1; --color-stitle: #000; 	--fontsize-stitle: 12vw;
+		--color-sdesc: #000; --color-slink: #000; --color-slink-hover: #000; 	--color-slink-bg: #fff; 	--color-slink-hover-bg: #0e54c1;    		--color-nav: #000; 	--color-nav-hover: #0E54CA;}
+.szbtn2-2 {--color-text: #fff; 	--color-bg: #000; 	--color-link: #fff; --color-link-hover: #37dbff; --color-stitle: #eaff68; --fontsize-stitle: 12vw;
+		--color-sdesc: #fff; --color-slink: #f1f1f1; --color-slink-hover: #000; 	--color-slink-bg: #000; 	--color-slink-hover-bg: #37dbff;    		--color-nav: #f1f1f1; --color-nav-hover: #37dbff;}
+.szbtn2-3 {--color-text: #fff; --color-bg: #333; 	--color-link: #fff; 	--color-link-hover: #ED4264; --color-stitle: #f1f1f1; --fontsize-stitle: 12vw;
+		--color-sdesc: #f1f1f1; --color-slink: #f1f1f1; --color-slink-hover: #f1f1f1; --color-slink-bg: #000; 	--color-slink-hover-bg: #ED4264;    		--color-nav: #ED4264; --color-nav-hover: #000;}
+.szbtn2-4 {--color-text: #000; --color-bg: #f1f1f1; --color-link: #000; 	--color-link-hover: #74c3d0; --color-stitle: #000; 	--fontsize-stitle: 8vw; --color-nav: #74c3d0; --color-nav-hover: #000;}
+.szbtn2-5 {--color-text: #fff; --color-bg: #576267; --color-link: #000; 	--color-link-hover: #da281b; --color-stitle: #000; 	--fontsize-stitle: 12vw;
+		--color-sdesc: #f1f1f1; --color-slink: #f1f1f1; --color-slink-hover: #f1f1f1; --color-slink-bg: #000; 	--color-slink-hover-bg: #da281b;    		--color-nav: #f1f1f1; --color-nav-hover: #da281b;}
+.szbtn2-6 {--color-text: #fff; --color-bg: #020202; --color-link: #fff; 	--color-link-hover: #415bf8; --color-stitle: #f1f1f1;   --fontsize-stitle: 12vw;--color-nav: #fff; 	--color-nav-hover: #415bf8;}
+.szdiscs {position: relative; display: block; align-self: end;text-align: center; grid-area: szdiscs;} .szbtn2 {margin: 0 0.15em;} .szbtn2:hover, .szbtn2:focus {opacity: 0.5;}
+.szbtn2 span {white-space: nowrap; text-transform: lowercase; pointer-events: none;} a.szbtn2--current {pointer-events: none;}
+body {font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; min-height: 100vh; color: #57585c; color: var(--color-text); background-color: #fff;
+	background-color: var(--color-bg); -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;}
+/* Fade effect */.js body {opacity: 0; transition: opacity 0.3s;} .js body.render {opacity: 1;}
+/* Page Loader */.js .loading::before {content: ''; position: fixed; z-index: 100000; top: 0; left: 0; width: 100%; height: 100%; background: var(--color-bg);}
+.js .loading::after {content: ''; position: fixed; z-index: 100000; top: 50%; left: 50%; width: 60px; height: 60px; margin: -30px 0 0 -30px; pointer-events: none;
+	border-radius: 50%; opacity: 0.4; background: var(--color-link); animation: loaderAnim 0.7s linear infinite alternate forwards;}
+@keyframes loaderAnim {to {	opacity: 1; 	transform: scale3d(0.5,0.5,1); }}
+a {text-decoration: none; color: var(--color-link); outline: none;} a:hover,a:focus {color: var(--color-link-hover); outline: none;}
+.hidden {position: absolute; overflow: hidden; width: 0; height: 0; pointer-events: none;}
+.szA-header {position: relative;z-index: 100;display: flex;flex-direction: row;align-items: flex-start;align-items: center;align-self: start;grid-area: header;justify-self: start;}
+.szA-header__title {font-size: 1em;font-weight: normal;margin: 0;padding: 0;color:yellow}
+.szA-links {position: relative; display: flex; justify-content: center; margin: 0 1em 0 0; text-align: center; white-space: nowrap;color:yellow} .szA-icon {display: inline-block; margin: 0.15em; padding: 0.25em;}
+/* Icons */.icon {display: block; width: 1.5em; height: 1.5em; margin: 0 auto; fill: currentColor;} .icon--arrow-rot {transform: rotate(180deg);}
+main {position: relative; width: 100%;} .content {position: relative; display: flex; justify-content: center; align-items: center; margin: 0 auto; min-height: 100vh;}
+.content--fixed {position: fixed; z-index: 10000; top: 0; left: 0; display: grid; align-content: space-between; width: 100%; max-width: none; min-height: 0; height: 100vh;
+	padding: 1.5em; pointer-events: none; grid-template-columns: 50% 50%; grid-template-rows: auto auto 4em; grid-template-areas: 'header szcontact' '... ...'	'... asdqwe';}
+.content--fixed a {pointer-events: auto;}
+.slideshow {width: 100%; height: 100vh; position: relative; overflow: hidden;} .slides {position: absolute; width: 100%; height: 100%;}
+.slide {position: absolute; width: 100%; height: 100%; overflow: hidden; opacity: 0; pointer-events: none; display: flex; flex-direction: column; align-content: center;
+	justify-content: center; align-items: center;}
+.slide--current {opacity: 1; pointer-events: auto;}
+.slide__img {position: absolute; top: -200px; left: -200px; width: calc(100% + 400px); height: calc(100% + 400px); background-size: cover; background-position: 50% 50%;}
+.slidenav {position: absolute; width: 300px; margin-left: -150px; left: 50%; bottom: 0; text-align: center; padding: 2em;}
+.slidenav__item {border: 0; background: none; font-weight: bold; color: var(--color-nav);} .slidenav__item:focus {outline: none;} .slidenav__item:hover {color: var(--color-nav-hover);}
+.shape {position: absolute; width: 100%; height: 100%; fill: var(--color-shape-fill); top: 0; pointer-events: none;}
+.slide__title {position: relative; font-size: var(--fontsize-stitle); margin: 0; cursor: default; line-height: 1; color: var(--color-stitle);}
+.slide__desc {position: relative; font-size: 1.5em; margin: 0 0 2em 0; cursor: default; color: var(--color-sdesc); padding: 0 1em; text-align: center;}
+.slide__link {position: relative; font-size: 1em; font-weight: bold; padding: 1em 2em; display: block; color: var(--color-slink); background: var(--color-slink-bg); transition: color 0.3s, background 0.3s;}
+.slide__link:hover {color: var(--color-slink-hover); background: var(--color-slink-hover-bg);} 
+
+.plocal {	position: fixed;	bottom: 0;	left: 0;	width: 100%;	padding: 0.5em;	color: inherit;	background: #000;	display: flex;	align-items: center;}
+.plocal:hover {	color: inherit;}
+.plocal__logo {	vertical-align: middle;	max-width: 100px;	transition: transform 0.5s, opacity 0.5s;	transition-timing-function: cubic-bezier(0.7,0,0.3,1);}
+.plocal__title {	margin: 0;	font-size: 1em;	font-weight: normal;	transition: transform 0.5s, opacity 0.5s;	transition-timing-function: cubic-bezier(0.7,0,0.3,1);}
+.plocal__desc {	font-size: 0.85em;}
+.plocal__img-wrap {	position: absolute;	bottom: 2em;	left: 0;	width: 100%;	background: #000;	transition: transform 0.5s 0.1s;	transform: translate3d(0,100%,0) translate3d(0,2em,0);
+	transition-timing-function: cubic-bezier(0.7,0,0.3,1);}
+.plocal__img {	max-width: 100%;	display: block;	opacity: 0;	transition: opacity 0.5s 0.2s;}
+
+/* Helper classes */ /* Hide visually and from screen readers */.hidden {display: none !important;}
+/* Hide only visually, but have it available for screen readers: https://snook.ca/archives/html_and_css/hiding-content-for-accessibility *
+ * 1. For long content, line feeds are not interpreted as spaces and small width  causes content to wrap 1 word per line:   https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe */
+.visuallyhidden {border: 0; clip: rect(0 0 0 0); -webkit-clip-path: inset(50%); clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; white-space: nowrap; /* 1 */}
+/** Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: https://www.drupal.org/node/897638 */
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {clip: auto; -webkit-clip-path: none; clip-path: none; height: auto; margin: 0; overflow: visible; position: static; width: auto; white-space: inherit;}
+/* * Hide visually and from screen readers, but maintain layout */.invisible {visibility: hidden;}
+/* * Clearfix: contain floats * * For modern browsers * 1. The space content is one way to avoid an Opera bug when the `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements  that receive the `clearfix` class. 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements. */ .clearfix:before, .clearfix:after {content: " "; /* 1 */ display: table; /* 2 */} .clearfix:after {clear: both;}
+/* EXAMPLE Media Queries for Responsive Design. These examples override the primary ('mobile first') styles. Modify as content requires. */
+@media only screen and (max-width: 55em) {body {padding: 0 0 4em 0; }	.content {flex-direction: column;height: auto;min-height: 0;padding-bottom: 10em;}
+	.content--fixed {position: relative;z-index: 1000;display: block;padding: 0.85em;} .szA-header {flex-direction: column;align-items: center;}
+	.szA-header__title {font-weight: bold; padding-bottom: 0.25em; text-align: center;color:blue} .slide__desc {font-size: 1em;} .slide__link {font-size: 0.85em;}}
+@media only screen and (min-width: 55em) {/* calc(var(--sz-h) * 1px) calc(var(--sz-h) * 1px) */
+.szdiscs {display: flex; justify-self: end;} .szbtn2 {display: block;width: 17px;height: 17px;margin: 0 4px;border-radius: 60%;background: var(--color-link);}
+	a.szbtn2--current {background: var(--color-link-hover); } .szbtn2 span {line-height: 1;position: absolute;right: 100%; display: none;margin: 0 1em 0 0;} .szbtn2--current span {display: block;}
+.plocal {position: fixed;bottom: 0;left: 0;width: 300px;padding: 2em 0;margin: 0 2em;color: inherit;display: block;background: transparent;}
+.plocal::before {content: 'Implemented by:';	display: inline-block;	vertical-align: middle;	padding: 0 1em 0 0;	font-size: 0.75em;	transition: transform 0.5s 0.1s;transition-timing-function: cubic-bezier(0.7,0,0.3,1);}
+.plocal__title {font-size: 1.5em;color:yellow} .szbtn2-6 .plocal__title {text-shadow: 1px 1px 3px rgba(0,0,0,0.6);} .plocal::before {display: block;	padding: 0 0 1em 0;} .plocal__logo {max-width: 250px;}
+.plocal:hover::before {transform: translate3d(0, -70px, 0);	transition-delay: 0s;} .plocal:hover .plocal__logo,	.plocal:hover .plocal__title {opacity: 0;	transform: translate3d(0, -80px, 0);}
+.plocal:hover .plocal__img-wrap {transform: translate3d(0,0,0);} .plocal:hover .plocal__img {opacity: 1;} }
+
+@media print,  (-webkit-min-device-pixel-ratio: 1.25),  (min-resolution: 1.25dppx),   (min-resolution: 120dpi) {/* Style adjustments for high resolution devices */}
+/* Print styles. Inlined to avoid the additional HTTP request:  http://www.phpied.com/delay-loading-your-print-css/  */
+@media print {*, *:before, *:after {background: transparent !important; color: #000 !important; /* Black prints faster: http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;        text-shadow: none !important;    }
+    a, a:visited {text-decoration: underline;} a[href]:after {content: " (" attr(href) ")";} abbr[title]:after {content: " (" attr(title) ")";}
+    /* Don't show links that are fragment identifiers, or use the `javascript:` pseudo protocol  */ a[href^="#"]:after, a[href^="javascript:"]:after {content: "";}
+    pre {white-space: pre-wrap !important;} pre, blockquote {border: 1px solid #999; page-break-inside: avoid;}
+    /* Printing Tables: http://css-discuss.incutio.com/wiki/Printing_Tables  */ thead {display: table-header-group;} tr, img {page-break-inside: avoid;}
+    p,    h2,    h3 {orphans: 3; widows: 3;}  h2, h3 {page-break-after: avoid;}}
